@@ -179,7 +179,7 @@ class Renderer(base.Renderer):
             max_results = self.data.max_results
 
             try:
-                results = tw.GetSearch(search_str, per_page=max_results)
+                results = tw.GetSearch(search_str, count=max_results)
                 logger.info("%s results obtained." % len(results))
             except Exception, e:
                 logger.info("Something went wrong: %s." % e)
